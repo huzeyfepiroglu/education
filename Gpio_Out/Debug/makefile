@@ -60,8 +60,8 @@ all: main-build
 main-build: Gpio_Out.elf secondary-outputs
 
 # Tool invocations
-Gpio_Out.elf Gpio_Out.map: $(OBJS) $(USER_OBJS) C:\Education\Gpio_Out\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Gpio_Out.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Education\Gpio_Out\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gpio_Out.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Gpio_Out.elf Gpio_Out.map: $(OBJS) $(USER_OBJS) C:\Users\ahuze\git\repository\Gpio_Out\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Gpio_Out.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\ahuze\git\repository\Gpio_Out\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gpio_Out.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
